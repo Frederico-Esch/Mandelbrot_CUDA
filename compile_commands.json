@@ -1,0 +1,12 @@
+[
+{
+  "directory": "D:/Programas/CUDA/mandelbrot/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\Hostx64\\x64\\cl.exe  /nologo -ID:\\Programas\\CUDA\\mandelbrot\\include /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\src\\stbi_wrapper.c.obj /FdTARGET_COMPILE_PDB /FS -c D:\\Programas\\CUDA\\mandelbrot\\src\\stbi_wrapper.c",
+  "file": "D:\\Programas\\CUDA\\mandelbrot\\src\\stbi_wrapper.c"
+},
+{
+  "directory": "D:/Programas/CUDA/mandelbrot/build",
+  "command": "D:\\Aplicativos\\cuda\\Development\\bin\\nvcc.exe --cuda-path=D:\\Aplicativos\\cuda\\Development -ID:\\Programas\\CUDA\\mandelbrot\\include -D_WINDOWS -Xcompiler=\"/W3 /GR /EHsc\" -Xcompiler=\"-MDd -Zi -Ob0 -Od /RTC1\" -x cu -c D:\\Programas\\CUDA\\mandelbrot\\src\\main.cu -o CMakeFiles\\mandelbrot.dir\\src\\main.cu.obj -Xcompiler=-FdTARGET_COMPILE_PDB,-FS",
+  "file": "D:\\Programas\\CUDA\\mandelbrot\\src\\main.cu"
+}
+]

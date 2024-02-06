@@ -1,0 +1,12 @@
+.cache
+*.png
+*.ini
+todo.txt
+build/
+src/lines.cu
+libs/
+include/im*
+include/GLFW
+include/glad
+include/KHR
+include/stb_image*
