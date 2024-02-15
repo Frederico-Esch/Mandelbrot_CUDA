@@ -1,12 +1,68 @@
 [
 {
-  "directory": "D:/Programas/CUDA/mandelbrot/build",
-  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\Hostx64\\x64\\cl.exe  /nologo -ID:\\Programas\\CUDA\\mandelbrot\\include /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\src\\stbi_wrapper.c.obj /FdTARGET_COMPILE_PDB /FS -c D:\\Programas\\CUDA\\mandelbrot\\src\\stbi_wrapper.c",
-  "file": "D:\\Programas\\CUDA\\mandelbrot\\src\\stbi_wrapper.c"
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\src\\stbi_wrapper.c.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\src\\stbi_wrapper.c",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\src\\stbi_wrapper.c",
+  "output": "CMakeFiles\\mandelbrot.dir\\src\\stbi_wrapper.c.obj"
 },
 {
-  "directory": "D:/Programas/CUDA/mandelbrot/build",
-  "command": "D:\\Aplicativos\\cuda\\Development\\bin\\nvcc.exe --cuda-path=D:\\Aplicativos\\cuda\\Development -ID:\\Programas\\CUDA\\mandelbrot\\include -D_WINDOWS -Xcompiler=\"/W3 /GR /EHsc\" -Xcompiler=\"-MDd -Zi -Ob0 -Od /RTC1\" -x cu -c D:\\Programas\\CUDA\\mandelbrot\\src\\main.cu -o CMakeFiles\\mandelbrot.dir\\src\\main.cu.obj -Xcompiler=-FdTARGET_COMPILE_PDB,-FS",
-  "file": "D:\\Programas\\CUDA\\mandelbrot\\src\\main.cu"
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\cuda\\Development\\bin\\nvcc.exe --cuda-path=D:\\Aplicativos\\cuda\\Development -ID:\\DEV\\Mandelbrot_CUDA\\include -D_WINDOWS  -std=c++14 -x cu -c D:\\DEV\\Mandelbrot_CUDA\\src\\main.cu -o CMakeFiles\\mandelbrot.dir\\src\\main.cu.obj ",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\src\\main.cu",
+  "output": "CMakeFiles\\mandelbrot.dir\\src\\main.cu.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\src\\Window.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\src\\Window.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\src\\Window.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\src\\Window.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\glad\\glad.c.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\glad\\glad.c",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\glad\\glad.c",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\glad\\glad.c.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_demo.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_demo.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_demo.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_demo.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_draw.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_draw.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_draw.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_draw.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_impl_glfw.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_impl_glfw.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_impl_glfw.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_impl_glfw.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_impl_opengl3.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_impl_opengl3.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_impl_opengl3.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_tables.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_tables.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_tables.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_tables.cpp.obj"
+},
+{
+  "directory": "D:/DEV/Mandelbrot_CUDA/build",
+  "command": "D:\\Aplicativos\\VisualStudio\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\DEV\\Mandelbrot_CUDA\\include /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_widgets.cpp.obj /FdTARGET_COMPILE_PDB /FS -c D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_widgets.cpp",
+  "file": "D:\\DEV\\Mandelbrot_CUDA\\libs\\imgui\\imgui_widgets.cpp",
+  "output": "CMakeFiles\\mandelbrot.dir\\libs\\imgui\\imgui_widgets.cpp.obj"
 }
 ]

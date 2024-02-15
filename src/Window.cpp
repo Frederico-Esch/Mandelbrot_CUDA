@@ -1,5 +1,4 @@
 #include <Window.h>
-#include <exception>
 #include <array>
 #include <stdio.h>
 #include <glad/glad.h>
@@ -186,7 +185,7 @@ namespace Window {
         return result;
     }
 
-    void LoadImage(size_t width, size_t height, void* data) {
+    void LoadImageToBytes(size_t width, size_t height, void* data) {
         glUseProgram(Program);
         glTextureSubImage2D(Texture, 0, 0, 0, (GLsizei)width, (GLsizei)height, GL_RGBA, GL_UNSIGNED_BYTE, data);
     }

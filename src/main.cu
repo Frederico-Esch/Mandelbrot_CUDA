@@ -1,8 +1,11 @@
-#include <iostream>
 #include <time.h>
+#include <string>
 #include <Window.h>
 
-namespace image {
+#include <windows.h>
+#include <commdlg.h>
+
+namespace Image {
     extern "C" {
         #include <stbi_wrapper.h>
     }
@@ -194,17 +197,16 @@ int main(void) {
 #define GPU
 
     State state {
-        { 15e-5, 15e-5 },
-        { 52e-2, 51e-2 },
-        500,
-        1e30,
+        { 15e-5f, 15e-5f },
+        { 52e-2f, 51e-2f },
+        500.f,
+        1e30f,
     };
-    state.speed = std::pow(10, std::log10(state.scale.x) - 1);
+    state.speed = (float)std::pow(10, std::log10(state.scale.x) - 1);
 
 #ifdef GPU
     Pixel* dev_data;
     cudaMalloc(&dev_data, sizeof(Pixel)*N);
-    clock_t start, end;
 
     dim3 grids(1000);
     dim3 threads(250);
@@ -218,7 +220,7 @@ int main(void) {
 
     Window::Init(WIDTH, HEIGHT, "teste");
 
-    Window::LoadImage(WIDTH, HEIGHT, data);
+    Window::LoadImageToBytes(WIDTH, HEIGHT, data);
 
     namespace Gui = Window::Gui;
 
@@ -246,13 +248,13 @@ int main(void) {
                 state.scale.x -= state.speed;
                 state.scale.y -= state.speed;
 
-                state.speed = std::pow(10, std::log10(state.scale.x)-1);
+                state.speed = (float)std::pow(10, std::log10(state.scale.x)-1);
             }
             if ((int)pressed & (int)Window::Key::MINUS_KEY) {
                 state.scale.x += state.speed;
                 state.scale.y += state.speed;
 
-                state.speed = std::pow(10, std::log10(state.scale.x)-1);
+                state.speed = (float)std::pow(10, std::log10(state.scale.x)-1);
             }
             reload_image = true;
         }
@@ -266,6 +268,22 @@ int main(void) {
         Gui::DisplayFloat2("Translation", (float*)&state.trans);
         Gui::DisplayFloat2("Scale", (float*)&state.scale);
         if (Gui::Button("Reload Image")) reload_image = true;
+        if (Gui::Button("Save-Image")) {
+            char path[MAX_PATH] = "";
+            OPENFILENAMEA file;
+            ZeroMemory(&file, sizeof(file));
+            file.lStructSize = sizeof(file);
+            file.hwndOwner = NULL;
+            file.lpstrFilter = "All Files (*.*)\0";
+            file.lpstrFile = path;
+            file.nMaxFile = MAX_PATH;
+            file.Flags = OFN_EXPLORER |  OFN_HIDEREADONLY;
+            file.lpstrDefExt = "png";
+            GetSaveFileNameA(&file);
+            if (strlen(path) > 0) {
+                Image::SAVE_RGBA(path, WIDTH, HEIGHT, data);
+            }
+        }
         Gui::End();
         Gui::Render();
 
@@ -274,7 +292,8 @@ int main(void) {
         if (reload_image) {
             gpu_draw<<<grids, threads>>>(dev_data, N, state);
             cudaMemcpy(data, dev_data, sizeof(Pixel)*N, cudaMemcpyDeviceToHost);
-            Window::LoadImage(WIDTH, HEIGHT, data);
+            printf("%d", WIDTH);
+            Window::LoadImageToBytes(WIDTH, HEIGHT, data);
             reload_image = false;
         }
     }

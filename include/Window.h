@@ -16,7 +16,7 @@ namespace Window {
     void InitUpdate();
     void Draw();
     void EndUpdate();
-    void LoadImage(size_t width, size_t height, void* data);
+    void LoadImageToBytes(size_t width, size_t height, void* data);
     Key KeyboardPressed();
 
     namespace Gui{

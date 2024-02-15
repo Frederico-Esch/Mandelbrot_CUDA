@@ -1,13 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
-project(mandelbrot CUDA C CXX)
+project(mandelbrot CUDA CXX C)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 add_executable(mandelbrot
     src/stbi_wrapper.c
-    src/main.cu
-    src/Window.cpp
     libs/glad/glad.c
+    src/Window.cpp
 
     libs/imgui/imgui.cpp
     libs/imgui/imgui_demo.cpp
@@ -16,8 +15,10 @@ add_executable(mandelbrot
     libs/imgui/imgui_impl_opengl3.cpp
     libs/imgui/imgui_tables.cpp
     libs/imgui/imgui_widgets.cpp
+
+    src/main.cu
 )
 
 target_include_directories(mandelbrot PUBLIC include)
 
-target_link_libraries(mandelbrot PUBLIC D:/Programas/CUDA/mandelbrot/libs/glfw/glfw3.lib opengl32.lib User32.lib Gdi32.lib Shell32.lib)
+target_link_libraries(mandelbrot PUBLIC D:/DEV/Mandelbrot_CUDA/libs/glfw/glfw3.lib opengl32.lib User32.lib Gdi32.lib Shell32.lib)
