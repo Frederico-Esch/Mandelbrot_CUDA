@@ -21,4 +21,4 @@ add_executable(mandelbrot
 
 target_include_directories(mandelbrot PUBLIC include)
 
-target_link_libraries(mandelbrot PUBLIC D:/DEV/Mandelbrot_CUDA/libs/glfw/glfw3.lib opengl32.lib User32.lib Gdi32.lib Shell32.lib)
+target_link_libraries(mandelbrot PUBLIC ${PROJECT_SOURCE_DIR}/libs/glfw/glfw3.lib opengl32.lib User32.lib Gdi32.lib Shell32.lib)
